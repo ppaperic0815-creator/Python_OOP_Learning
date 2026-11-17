@@ -1,0 +1,246 @@
+
+/* ===== 全域設定 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    background: #f3f8fc;
+    color: #334155;
+    line-height: 1.8;
+}
+
+/* ===== 頁首 ===== */
+header {
+    background: linear-gradient(135deg, #2563a6, #54a9d8);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    letter-spacing: 3px;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+nav {
+    margin-top: 25px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 12px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+    color: #2563a6;
+}
+
+/* ===== 主要內容 ===== */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+/* ===== 首頁歡迎區 ===== */
+.hero {
+    background: linear-gradient(135deg, #d9efff, #ffffff);
+    text-align: center;
+    padding: 65px 25px;
+    border-radius: 20px;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.hero h2 {
+    font-size: 30px;
+    color: #2563a6;
+}
+
+.hero p {
+    margin: 15px 0 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2878b9;
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #174d80;
+    transform: translateY(-3px);
+}
+
+/* ===== 教學區塊 ===== */
+section:not(.hero) {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    scroll-margin-top: 20px;
+}
+
+section h2 {
+    color: #2878b9;
+    font-size: 25px;
+    border-left: 5px solid #54a9d8;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.content h3 {
+    color: #365b7e;
+    margin-bottom: 12px;
+}
+
+.content p {
+    margin-bottom: 15px;
+}
+
+.content ul {
+    padding-left: 25px;
+}
+
+.content li {
+    margin-bottom: 8px;
+}
+
+/* ===== 程式碼區塊 ===== */
+pre {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 22px;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+code {
+    font-family: Consolas, monospace;
+}
+
+/* ===== 表單與按鈕 ===== */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2878b9;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    background: #2878b9;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #174d80;
+    transform: translateY(-2px);
+}
+
+/* ===== 寵物狀態 ===== */
+#petStatus {
+    background: #eaf5ff;
+    border: 1px solid #c6e3f7;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #285b83;
+}
+
+/* ===== 頁尾 ===== */
+footer {
+    background: #1e4263;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* ===== 手機版排版 ===== */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav a {
+        margin: 4px;
+        padding: 7px 10px;
+        font-size: 14px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    section:not(.hero) {
+        padding: 20px;
+    }
+
+    .buttons button {
+        flex: 1 1 40%;
+    }
+}

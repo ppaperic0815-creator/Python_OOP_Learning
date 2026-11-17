@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 類別與物件學習網頁</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Python 類別與物件</h1>
+    <p>Python Object-Oriented Programming</p>
+    <nav>
+        <a href="#intro">認識物件</a>
+        <a href="#class">類別與物件</a>
+        <a href="#inheritance">繼承</a>
+        <a href="#pet">虛擬寵物</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <h2>歡迎來到 Python 學習世界！</h2>
+    <p>從基礎認識類別、物件、屬性、方法，到學習繼承。</p>
+    <a href="#intro" class="btn">開始學習</a>
+</section>
+
+<section id="intro">
+    <h2>9-1 認識類別與物件</h2>
+    <div class="content">
+        <h3>什麼是物件導向？</h3>
+        <p>物件導向是一種程式設計方式，將資料與程式碼組合成物件。</p>
+
+        <ul>
+            <li><b>物件 Object：</b>資料與程式碼的組合。</li>
+            <li><b>屬性 Attribute：</b>描述物件的特質。</li>
+            <li><b>方法 Method：</b>定義物件可以執行的動作。</li>
+            <li><b>類別 Class：</b>物件的藍圖或樣板。</li>
+        </ul>
+    </div>
+</section>
+
+<section id="class">
+    <h2>9-2 使用類別與物件</h2>
+    <div class="content">
+        <h3>建立一個 Car 類別</h3>
+        <pre><code>class Car:
+    wheels = 4
+
+    def __init__(self, brand, year):
+        self.brand = brand
+        self.year = year
+
+    def show_info(self):
+        print(f"廠牌：{self.brand}，年份：{self.year}")
+
+car1 = Car("Mazda", 2023)
+car1.show_info()</code></pre>
+
+        <p>重點：class 用來定義類別，__init__() 負責初始化物件。</p>
+    </div>
+</section>
+
+<section id="inheritance">
+    <h2>9-3 繼承</h2>
+    <div class="content">
+        <h3>什麼是繼承？</h3>
+        <p>繼承是讓一個類別取得另一個類別的成員，可以提升程式的重複使用性及擴展性。</p>
+
+        <pre><code>class Animal:
+    def speak(self):
+        print("動物發出聲音")
+
+class Dog(Animal):
+    def speak(self):
+        print("狗狗汪汪叫")
+
+dog = Dog()
+dog.speak()</code></pre>
+    </div>
+</section>
+
+<section id="pet">
+    <h2>虛擬寵物互動實作</h2>
+    <div class="content">
+        <h3>建立你的虛擬寵物</h3>
+
+        <label>寵物名字：</label>
+        <input type="text" id="petName" value="小白">
+
+        <label>寵物種類：</label>
+        <select id="petSpecies">
+            <option>狗</option>
+            <option>貓</option>
+            <option>龍</option>
+        </select>
+
+        <div class="buttons">
+            <button onclick="createPet()">建立寵物</button>
+            <button onclick="feedPet()">餵食</button>
+            <button onclick="playPet()">玩耍</button>
+            <button onclick="sleepPet()">睡覺</button>
+        </div>
+
+        <div id="petStatus">
+            尚未建立寵物
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>Python 類別與物件學習網頁</p>
+    <p>AI 融入課程｜Python Chapter 09</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
